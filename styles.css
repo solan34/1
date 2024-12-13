@@ -37,3 +37,18 @@ body {
     display: flex;
 }
 
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f
+
+img {
+    width: 200px; /* Ширина изображения */
+    height: 150px; /* Высота изображения */
+}

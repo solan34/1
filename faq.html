@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часто Задаваемые Вопросы | Hot Bass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .answer {
+            display: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Часто Задаваемые Вопросы</h1>
+        
+        <div class="question">
+            Что такое Hot Bass?
+            <span class="plusminus">+</span>
+        </div>
+        <div class="answer">
+            <p>Hot Bass – это компания, специализирующаяся на производстве высококачественных автомобильных аудиосистем. Мы предлагаем широкий ассортимент продукции, включая сабвуферы, усилители, акустические системы и аксессуары.</p>
+        </div>
+
+        <div class="question">
+            Какие способы оплаты доступны?
+            <span class="plusminus">+</span>
+        </div>
+        <div class="answer">
+            <p>Мы принимаем оплату банковскими картами Visa, MasterCard, а также через электронные кошельки Яндекс.Деньги и QIWI. Также возможен безналичный расчет для юридических лиц.</p>
+        </div>
+
+        <div class="question">
+            Сколько времени занимает доставка?
+            <span class="plusminus">+</span>
+        </div>
+        <div class="answer">
+            <p>Срок доставки зависит от вашего местоположения и выбранного способа доставки. Обычно доставка по Москве и Санкт-Петербургу занимает 1-2 дня, по регионам – до 7 дней. Точную информацию можно уточнить у менеджера при оформлении заказа.</p>
+        </div>
+
+        <div class="question">
+            Есть ли гарантия на продукцию?
+            <span class="plusminus">+</span>
+        </div>
+        <div class="answer">
+            <p>Да, вся наша продукция имеет гарантию производителя сроком от 1 до 3 лет в зависимости от модели. Подробности гарантии указаны в инструкции по эксплуатации каждого изделия.</p>
+        </div>
+
+        <div class="question">
+            Как оформить возврат товара?
+            <span class="plusminus">+</span>
+        </div>
+        <div class="answer">
+            <p>Для оформления возврата необходимо связаться с нашим отделом поддержки клиентов по телефону или электронной почте, указанным на нашем сайте. Возврат осуществляется в течение 14 дней со дня покупки при условии сохранения товарного вида и упаковки.</p>
+        </div>
+    </div>
+
+<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                question.childNodes[1].innerHTML = '+';
+            } else {
+                answer.classList.add('show');
+                question.childNodes[1].innerHTML = '-';
+            }
+        });
+    });
+</script>
+</body>
+</html>
